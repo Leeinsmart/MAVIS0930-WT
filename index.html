@@ -306,6 +306,10 @@ footer{border-top:1px solid var(--line);margin-top:var(--s6);padding:var(--s3) 0
  /* 名字就是這張卡的標題，不用再標一次「姓名」。 */
  table.contacts td.fn{font-size:var(--f2);line-height:var(--lh2);padding-bottom:var(--s2)}
  table.contacts td.fn::before{display:none}
+ /* 事項卡是每天要掃的主畫面，整張卡不跟著手機縮字（Lee 2026-09-02 交辦：
+    標題 16、徽章與下一步 14）。在卡片這一層把兩級還原成桌面值，字級與行距
+    仍然成對，不用逐個選擇器去改。區塊標題那一級不動。 */
+ .item{--f2:16px;--lh2:1.6;--f1:14px;--lh1:1.55}
  table.contacts td.nowrap{white-space:normal}
  table.contacts td:nth-child(2){white-space:normal}
  button.tab{text-align:left;padding:var(--s2) var(--s3)}
